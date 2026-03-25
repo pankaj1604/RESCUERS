@@ -1,0 +1,216 @@
+/* Profile Info */
+.profile-info-container {
+    margin: 0 64px;
+    background: #dddddd;
+    border-radius: 12px;
+    padding: 48px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.profile-info .patient-name {
+    color: #121212;
+    font-size: 32px;
+    margin-bottom: 4px;
+}
+
+.edit-profile-btn {
+    background: #333;
+    color: #fff;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 32px;
+    transition: all 0.2s ease;
+}
+
+.edit-profile-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dasboard-qr img {
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+}
+
+.dasboard-qr img:hover {
+    transform: translateY(-2px);
+}
+
+/* Dashboard Feature Section */
+.d-feature-container {
+    margin: 32px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.d-feature-box {
+    padding: 16px;
+    background: #C42026;
+    border-radius: 12px;
+    width: 49%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+}
+
+.d-feature-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+.d-feature-box p {
+    text-align: center;
+    margin: 32px 0;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.d-feature-box .d-feature-icon {
+    height: 200px;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.health-profile {
+    background: #fff url(../icons/dashboard/health-profile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.reports {
+    background: #fff url(../icons/dashboard/reports.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Emergency Alerts */
+.d-title {
+    font-size: 28px;
+    color: #C42026;
+    margin: 64px 64px 32px;
+}
+
+.p-alert-card-container {
+    margin: 32px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.p-alert-card {
+    padding: 32px;
+    width: 100%;
+    height: 100%;
+    background-color: #dddddd;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.patient-alert-info p {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.patient-alert-info h3 {
+    font-size: 24px;
+    margin: 16px 0 4px;
+}
+
+.cancel-alert-btn {
+    padding: 6px 16px;
+    color: #fff;
+    background: #C42026;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 32px;
+    font-size: 16px;
+}
+
+.p-alert-cta {
+    align-self: last baseline;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 16px;
+}
+
+.alert-progress {
+    padding: 8px 16px;
+    color: #333;
+    background: #fff;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.alert-amb-cta {
+    padding: 8px 16px;
+    color: #fff;
+    background: #333;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 16px;
+}
+
+/* Add volunteer */
+.add-volunteer-title {
+    margin: 64px 64px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-volunteer-title h3 {
+    font-size: 28px;
+    color: #C42026;
+
+}
+
+.add-volunteer-btn {
+    padding: 10px 32px;
+    background: #C42026;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.volunteer-card-container {
+    margin: 32px 64px;
+}
+
+.volunteer-cards {
+    width: 100%;
+    padding: 32px;
+    background: #dddddd;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.volunteer-info {
+    font-size: 14px;
+}
+
+.volunteer-info .v-name {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.volunteer-info p {
+    margin-bottom: 6px;
+}
+
+.volunteer-contact {}
