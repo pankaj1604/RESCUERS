@@ -33,17 +33,24 @@
         </div>
     </nav>
 
-    <!-- Sign Up -->
+    <!-- Login -->
     <div class="signup-container">
         <div class="signup-title">
             <h3>Login</h3>
             <p>as Patient</p>
         </div>
-        <form action="">
-            <label for="name">Email</label>
-            <input type="text" name="email" id="" placeholder="demo1234@gmail.com">
-            <label for="email">Password</label>
-            <input type="password" name="password">
+        <form action="patient_login.php" method="POST">
+            <label>Email or Phone</label>
+            <input type="text" name="login_input" placeholder="Enter email or phone" required>
+
+            <label>Password</label>
+            <div style="position: relative;">
+                <input type="password" name="password" id="password" required>
+                <span id="togglePassword">
+                    <img src="../icons/login_signup/eye.svg" alt="">
+                </span>
+            </div>
+
             <input type="submit" value="Login" class="submit-btn">
         </form>
         <p class="form-cta">Don't have an account? <a href="../SignUp/patient_signup.html">Sign Up</a></p>
@@ -92,6 +99,17 @@
     <div class="footer-copyright">
         <p>Developed by <a href="">Pankaj Kumar</a></p>
     </div>
+
+
+    <script>
+        const togglePassword = document.getElementById("togglePassword");
+        const password = document.getElementById("password");
+
+        togglePassword.addEventListener("click", function () {
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+        });
+    </script>
 </body>
 
 </html>

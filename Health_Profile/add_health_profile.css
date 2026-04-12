@@ -1,5 +1,5 @@
 .health-profile-form-container {
-    margin: 32px 64px;
+    margin: 0 64px;
     padding: 48px;
     border-radius: 12px;
     background: #C42026;
@@ -9,11 +9,96 @@
     color: #fff;
 }
 
+/* Health Profile Form */
+.health-profile-form-container {
+    margin: 0 64px;
+    background: #C42026;
+    border-radius: 12px;
+    padding: 48px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.health-profile-form-container h2 {
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 6px;
+}
+
+.health-profile-form-container form {
+    width: 100%;
+    margin: 32px 0;
+}
+
+/* Labels */
+.health-profile-form-container form label {
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Inputs + Select */
+.health-profile-form-container form input,
+.health-profile-form-container form select {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    outline: none;
+    margin-bottom: 16px;
+    margin-top: 6px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Placeholder */
+.health-profile-form-container form input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* Multi input sections */
+.multi-input-container {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.multi-input-container .e-contacts,
+.multi-input-container .allergies,
+.multi-input-container .diagnosed,
+.multi-input-container .medication {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Add More Button */
 .h-add-btn {
-    font-size: 14px;
-    padding: 8px 16px;
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 6px 12px;
     background: #ddd;
     color: #121212;
     border-radius: 4px;
     display: inline-block;
+    border: none;
+}
+
+.health-profile-form-container form .submit-btn {
+    background-color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    color: #121212;
+    margin-top: 32px;
+    width: max-content;
+    padding: 12px 32px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.health-profile-form-container form .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }

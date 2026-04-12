@@ -1,0 +1,145 @@
+<?php
+include '../connect.php';
+
+if (!isset($_SESSION['patient_id'])) {
+    header("Location: ../Login/patient_login.html");
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="patient_dashboard.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+     <?php include "../navbar.php"; ?>
+
+    <!-- Dashboard -->
+
+
+    <!-- Profile Info -->
+    <div class="profile-info-container">
+        <div class="profile-info">
+            <h2 class="patient-name"><?php echo $_SESSION['name']; ?></h2>
+            <p class="patient-email"><?php echo $_SESSION['email']; ?></p>
+            <a href="" class="edit-profile-btn">Edit Profile</a>
+        </div>
+        <div class="dasboard-qr-alert">
+            <img src="../icons/qr-icon.svg" alt="" class="d-qr-icon">
+            <a href="" class="alert-btn hover-up"><img src="../icons/alert-icon.png" alt=""> ALERT</a>
+        </div>
+
+    </div>
+
+    <!-- Dashboard Feature Section -->
+    <div class="d-feature-container">
+        <a href="../Health_Profile/health_profile.html" class="d-feature-box">
+            <div class="d-feature-icon health-profile"></div>
+            <p>Health Profile</p>
+        </a>
+        <div class="d-feature-box">
+            <div class="d-feature-icon reports"></div>
+            <p>Reports</p>
+        </div>
+    </div>
+
+
+    <!-- Emergency Alerts -->
+    <h3 class="d-title">Emergency Alerts</h3>
+    <div class="p-alert-card-container">
+        <div class="p-alert-card">
+            <div class="patient-alert-info">
+                <p>Alert Created !</p>
+                <h3>Aniket Kumar</h3>
+                <p class="p-address">Bompass Town</p>
+                <p class="alert-date-time">7-2-2026 | 7:20 p.m.</p>
+                <a href="" class="cancel-alert-btn hover-up">Cancel</a>
+            </div>
+
+            <div class="p-alert-cta">
+                <div class="alert-progress hover-up">In Progress</div>
+                <div class="alert-amb-cta hover-up">Call Ambulance</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Connect with Volunteers -->
+    <div class="add-volunteer-title">
+        <h3>Volunteers</h3>
+        <a href="" class="add-volunteer-btn hover-up">Add +</a>
+    </div>
+    <div class="volunteer-card-container">
+        <div class="volunteer-cards">
+            <div class="volunteer-info">
+                <h3 class="v-name">Arpit Kumar</h3>
+                <p class="v-email">arpit123@gmail.com</p>
+                <p class="v-address">Bompass Town</p>
+            </div>
+
+            <div class="volunteer-contact">
+                <div class="v-contact-btn v-call-btn hover-up">
+                    <img src="../icons/social_icons/phone.svg" alt="">
+                </div>
+                <div class="v-contact-btn v-whatsapp-btn hover-up">
+                    <img src="../icons/social_icons/whatsapp.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-brand-info">
+            <a href="../index.html">
+                <div class="footer-logo">
+                    <img src="../images/logo.png" alt="rescuers_logo">
+                    <h2>RESCUERS</h2>
+                </div>
+            </a>
+            <p>Rescuers is a health emergency response platform that connects patients with nearby volunteers and
+                NGOs instantly.</p>
+        </div>
+
+        <div class="footer-link-box">
+            <h4>Quick Links</h4>
+            <div class="quick-links">
+                <a href="../index.html">HOME</a>
+                <a href="">ABOUT</a>
+                <a href="">FEATURES</a>
+                <a href="">CONTACT</a>
+            </div>
+        </div>
+
+        <div class="footer-link-box">
+            <h4>Contact</h4>
+            <div class="footer-social-links">
+                <a href=""><img src="../icons/social_icons/email.svg" alt=""> dev.pankajkr7@gmail.com</a>
+                <a href=""><img src="../icons/social_icons/location.svg" alt=""> Bompass Town, B.Deoghar</a>
+                <div class="footer-social-icons">
+                    <a href=""><img src="../icons/social_icons/linkedin.svg" alt=""></a>
+                    <a href=""><img src="../icons/social_icons/instagram.svg" alt=""></a>
+                    <a href=""><img src="../icons/social_icons/facebook.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Copyright -->
+    <div class="footer-copyright">
+        <p>Developed by <a href="">Pankaj Kumar</a></p>
+    </div>
+</body>
+
+</html>

@@ -69,3 +69,16 @@
     color: #fff;
     text-decoration: underline;
 }
+
+/* Toggle Password */
+#togglePassword {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#togglePassword img {
+    width: 25px;
+}

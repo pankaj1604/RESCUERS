@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - Patient</title>
-    <link rel="stylesheet" href="signup.css">
+    <title>Add Report</title>
+    <link rel="stylesheet" href="add_report.css">
     <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
+
     <!-- Navbar -->
     <nav>
         <a href="../index.html" class="logo">
@@ -33,27 +34,33 @@
         </div>
     </nav>
 
-    <!-- Sign Up -->
-    <div class="signup-container">
-        <div class="signup-title">
-            <h3>Sign Up</h3>
-            <p>as Patient</p>
-        </div>
-        <form action="">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="" placeholder="Pankaj Kumar">
-            <label for="email">Email</label>
-            <input type="text" name="email" id="" placeholder="demo1234@gmail.com">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="">
-            <label for="confirm-password">Confirm Password</label>
-            <input type="text" name="confirm-password" id="">
-            <input type="submit" value="Sign Up" class="submit-btn">
+    <div class="add-report-container">
+
+        <h2>Add Medical Report</h2>
+
+        <form>
+
+            <!-- Report Name -->
+            <label>Report Name</label>
+            <input type="text" placeholder="Enter report name">
+
+            <!-- File Upload -->
+            <label>Upload Report</label>
+
+            <div class="drop-area" id="drop-area">
+                <p>Drag & Drop file here</p>
+                <span>or</span>
+                <input type="file" id="fileInput" hidden>
+                <button type="button" class="browse-btn">Browse File</button>
+                <p class="file-name" id="fileName">No file selected</p>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="submit-btn">Upload Report</button>
+
         </form>
-        <p class="form-cta">Already have an account? <a href="../Login/patient_login.html">Login</a></p>
+
     </div>
-
-
 
     <!-- Footer -->
     <div class="footer">
@@ -96,6 +103,40 @@
     <div class="footer-copyright">
         <p>Developed by <a href="">Pankaj Kumar</a></p>
     </div>
+
+    <script>
+        const dropArea = document.getElementById("drop-area");
+        const fileInput = document.getElementById("fileInput");
+        const fileName = document.getElementById("fileName");
+        const browseBtn = document.querySelector(".browse-btn");
+
+        browseBtn.addEventListener("click", () => fileInput.click());
+
+        fileInput.addEventListener("change", () => {
+            fileName.textContent = fileInput.files[0]?.name || "No file selected";
+        });
+
+        dropArea.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            dropArea.classList.add("dragover");
+        });
+
+        dropArea.addEventListener("dragleave", () => {
+            dropArea.classList.remove("dragover");
+        });
+
+        dropArea.addEventListener("drop", (e) => {
+            e.preventDefault();
+            dropArea.classList.remove("dragover");
+
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                fileInput.files = files;
+                fileName.textContent = files[0].name;
+            }
+        });
+    </script>
+
 </body>
 
 </html>

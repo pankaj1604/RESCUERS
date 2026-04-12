@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Dashboard</title>
-    <link rel="stylesheet" href="patient_dashboard.css">
+    <title>Medical Reports</title>
+    <link rel="stylesheet" href="reports.css">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../Patient_Dashboard/patient_dashboard.css">
 </head>
 
 <body>
+
     <!-- Navbar -->
     <nav>
         <a href="../index.html" class="logo">
@@ -33,82 +35,62 @@
         </div>
     </nav>
 
-    <!-- Dashboard -->
-
-
     <!-- Profile Info -->
     <div class="profile-info-container">
         <div class="profile-info">
             <h2 class="patient-name">Aniket Kumar</h2>
             <p class="patient-email">aniket123@gmail.com</p>
-            <a href="" class="edit-profile-btn">Edit Profile</a>
         </div>
         <div class="dasboard-qr-alert">
             <img src="../icons/qr-icon.svg" alt="" class="d-qr-icon">
-            <a href="" class="alert-btn hover-up"><img src="../icons/alert-icon.png" alt=""> ALERT</a>
-        </div>
-
-    </div>
-
-    <!-- Dashboard Feature Section -->
-    <div class="d-feature-container">
-        <a href="../Health_Profile/health_profile.html" class="d-feature-box">
-            <div class="d-feature-icon health-profile"></div>
-            <p>Health Profile</p>
-        </a>
-        <div class="d-feature-box">
-            <div class="d-feature-icon reports"></div>
-            <p>Reports</p>
         </div>
     </div>
 
+    <!-- Reports -->
+    <div class="reports-container">
 
-    <!-- Emergency Alerts -->
-    <h3 class="d-title">Emergency Alerts</h3>
-    <div class="p-alert-card-container">
-        <div class="p-alert-card">
-            <div class="patient-alert-info">
-                <p>Alert Created !</p>
-                <h3>Aniket Kumar</h3>
-                <p class="p-address">Bompass Town</p>
-                <p class="alert-date-time">7-2-2026 | 7:20 p.m.</p>
-                <a href="" class="cancel-alert-btn hover-up">Cancel</a>
-            </div>
-
-            <div class="p-alert-cta">
-                <div class="alert-progress hover-up">In Progress</div>
-                <div class="alert-amb-cta hover-up">Call Ambulance</div>
-            </div>
+        <div class="reports-header">
+            <h2>Medical Reports</h2>
+            <button class="add-report-btn">+ Add Report</button>
         </div>
-    </div>
 
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Report Name</th>
+                        <th>View</th>
+                        <th>Download</th>
+                    </tr>
+                </thead>
 
-    <!-- Connect with Volunteers -->
-    <div class="add-volunteer-title">
-        <h3>Volunteers</h3>
-        <a href="" class="add-volunteer-btn hover-up">Add +</a>
-    </div>
-    <div class="volunteer-card-container">
-        <div class="volunteer-cards">
-            <div class="volunteer-info">
-                <h3 class="v-name">Arpit Kumar</h3>
-                <p class="v-email">arpit123@gmail.com</p>
-                <p class="v-address">Bompass Town</p>
-            </div>
+                <tbody>
+                    <tr>
+                        <td>12 Apr 2026</td>
+                        <td>Blood Test Report</td>
+                        <td><button class="action-btn view-btn">View</button></td>
+                        <td><button class="action-btn download-btn">Download</button></td>
+                    </tr>
 
-            <div class="volunteer-contact">
-                <div class="v-contact-btn v-call-btn hover-up">
-                    <img src="../icons/social_icons/phone.svg" alt="">
-                </div>
-                <div class="v-contact-btn v-whatsapp-btn hover-up">
-                    <img src="../icons/social_icons/whatsapp.svg" alt="">
-                </div>
-            </div>
+                    <tr>
+                        <td>05 Apr 2026</td>
+                        <td>X-Ray Chest</td>
+                        <td><button class="action-btn view-btn">View</button></td>
+                        <td><button class="action-btn download-btn">Download</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>28 Mar 2026</td>
+                        <td>Prescription</td>
+                        <td><button class="action-btn view-btn">View</button></td>
+                        <td><button class="action-btn download-btn">Download</button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+
     </div>
-
-
-
 
     <!-- Footer -->
     <div class="footer">
@@ -151,6 +133,8 @@
     <div class="footer-copyright">
         <p>Developed by <a href="">Pankaj Kumar</a></p>
     </div>
+
+
 </body>
 
 </html>
