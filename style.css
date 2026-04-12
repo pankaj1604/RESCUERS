@@ -55,6 +55,10 @@ nav {
     fill: #C42026;
 }
 
+.nav-account-icon {
+    display: none;
+}
+
 /* NavLinks */
 .navlinks {
     display: flex;
@@ -120,35 +124,51 @@ nav {
     margin: 16px 0;
 }
 
-.hero-btns {
+.hero-btn-container {
     display: flex;
-    align-items: start;
+    margin-top: 32px;
     gap: 16px;
-    margin-top: 48px;
+    text-align: center;
 }
 
-.hero-btns a {
-    display: block;
+.hero-btns {
     padding: 10px 32px;
+    border: 2px solid #333;
     border-radius: 4px;
     font-weight: 500;
-    transition: all 0.2s ease-in;
-}
-
-.hero-sign-in-btn {
-    border: 2px solid #333;
     color: #333;
+    cursor: pointer;
+    position: relative;
 }
 
-.hero-sign-up-btn {
+.hero-btns:nth-last-child(1) {
     background: #333;
-    border: 2px solid #333;
     color: #fff;
 }
 
-.hero-btns a:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.sign-options {
+    position: absolute;
+    left: 0;
+    bottom: -250%;
+    border-radius: 4px;
+    background: #333;
+    visibility: hidden;
+    transition: 0.2s ease;
+}
+
+.sign-options a {
+    padding: 10px 32px;
+    display: block;
+    color: #fff;
+}
+
+.sign-options a:hover {
+    background: #C42026;
+    border-radius: 4px;
+}
+
+.sign-options a:nth-child(1) {
+    border-bottom: 1px solid #fff;
 }
 
 

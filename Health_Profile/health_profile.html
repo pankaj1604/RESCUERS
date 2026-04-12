@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Volunteer</title>
-    <link rel="stylesheet" href="../SignUp/signup.css">
+    <title>Health Profile</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../Patient_Dashboard/patient_dashboard.css">
+    <link rel="stylesheet" href="health_profile.css">
 </head>
 
 <body>
@@ -33,22 +34,56 @@
         </div>
     </nav>
 
-    <!-- Sign Up -->
-    <div class="signup-container">
-        <div class="signup-title">
-            <h3>Login</h3>
-            <p>as Volunteer</p>
+    <!-- Dashboard -->
+
+
+    <!-- Profile Info -->
+    <div class="profile-info-container">
+        <div class="profile-info">
+            <h2 class="patient-name">Aniket Kumar</h2>
+            <p class="patient-email">aniket123@gmail.com</p>
         </div>
-        <form action="">
-            <label for="name">Email</label>
-            <input type="text" name="email" id="" placeholder="demo1234@gmail.com">
-            <label for="email">Password</label>
-            <input type="password" name="password">
-            <input type="submit" value="Login" class="submit-btn">
-        </form>
-        <p class="form-cta">Don't have an account? <a href="../SignUp/volunteer_signup.html">Sign Up</a></p>
+        <div class="dasboard-qr-alert">
+            <img src="../icons/qr-icon.svg" alt="" class="d-qr-icon">
+        </div>
     </div>
 
+    <!-- Health Profile -->
+    <div class="h-profile-container">
+        <div class="h-profile-inner-container">
+            <div class="blood-group h-info-container">
+                <div class="h-info-title">Blood Group</div>
+                <div class="h-info">O+</div>
+            </div>
+
+            <div class="address h-info-container">
+                <div class="h-info-title">Address</div>
+                <div class="h-info">Bompass Town, Deoghar, Jharkhand</div>
+            </div>
+
+            <div class="e-contact h-info-container">
+                <div class="h-info-title">Emergency Contacts</div>
+                <div class="h-info">9315378245, 9031495883</div>
+            </div>
+
+            <div class="allergies h-info-container">
+                <div class="h-info-title">Allergies</div>
+                <div class="h-info">Nuts, Dairy, Penicillin</div>
+            </div>
+
+            <div class="diagnosed h-info-container">
+                <div class="h-info-title">Diagnosed With</div>
+                <div class="h-info">Diabetes, Hypertension</div>
+            </div>
+
+            <div class="medication h-info-container">
+                <div class="h-info-title">Medication</div>
+                <div class="h-info">Aspirin, Cetirizine</div>
+            </div>
+        </div>
+
+        <a href="" class="edit-health-profile-btn hover-up">Edit Health Profile</a>
+    </div>
 
 
     <!-- Footer -->

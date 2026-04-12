@@ -1,0 +1,19 @@
+.health-profile-form-container {
+    margin: 32px 64px;
+    padding: 48px;
+    border-radius: 12px;
+    background: #C42026;
+}
+
+.health-profile-form-container>h2 {
+    color: #fff;
+}
+
+.h-add-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+    background: #ddd;
+    color: #121212;
+    border-radius: 4px;
+    display: inline-block;
+}

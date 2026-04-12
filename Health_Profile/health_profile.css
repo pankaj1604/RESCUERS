@@ -1,0 +1,39 @@
+.h-profile-container {
+    margin: 32px 64px;
+    background: #ddd;
+    padding: 48px;
+    border-radius: 12px;
+
+}
+
+.h-profile-inner-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.h-profile-container .h-info-container {
+    margin-bottom: 48px;
+    border-radius: 6px;
+    width: 50%;
+}
+
+.h-info-container .h-info-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #C42026;
+    margin-bottom: 8px;
+}
+
+.h-info-container .h-info {
+    font-size: 20px;
+    color: #121212;
+}
+
+.edit-health-profile-btn {
+    padding: 10px 16px;
+    color: #fff;
+    background: #C42026;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 16px;
+}

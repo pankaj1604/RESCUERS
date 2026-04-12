@@ -5,7 +5,7 @@
     border-radius: 12px;
     padding: 48px;
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: space-between;
 }
 
@@ -31,15 +31,39 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.dasboard-qr img {
+.dasboard-qr-alert {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.dasboard-qr-alert img {
     height: 50px;
     cursor: pointer;
     transition: all 0.2s ease;
 
 }
 
-.dasboard-qr img:hover {
+.dasboard-qr-alert .d-qr-icon:hover {
     transform: translateY(-2px);
+}
+
+.alert-btn {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #C42026;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.alert-btn img {
+    height: 25px;
+    margin-right: 8px;
 }
 
 /* Dashboard Feature Section */
@@ -213,4 +237,30 @@
     margin-bottom: 6px;
 }
 
-.volunteer-contact {}
+.volunteer-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    align-self: last baseline;
+}
+
+.v-contact-btn {
+    height: 40px;
+    width: 40px;
+    background: #C42026;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.v-call-btn {
+    padding: 8%;
+}
+
+.v-call-btn img {
+    height: 100%;
+}
+
+.v-whatsapp-btn {
+    background: none;
+}
