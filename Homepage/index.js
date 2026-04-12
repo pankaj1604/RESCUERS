@@ -25,3 +25,19 @@ hero_sign_up_btn.addEventListener('mouseout', ()=>{
     sign_up_opt.style.visibility = "hidden";
     sign_up_opt.style.bottom = "-250%"
 })
+
+// Navbar Account
+const account = document.querySelector(".account");
+const dropdown = document.getElementById("user-icon-opt");
+
+account.addEventListener("click", () => {
+    dropdown.style.display =
+        dropdown.style.display === "flex" ? "none" : "flex";
+});
+
+// Close when clicking outside
+document.addEventListener("click", (e) => {
+    if (!account.contains(e.target)) {
+        dropdown.style.display = "none";
+    }
+});

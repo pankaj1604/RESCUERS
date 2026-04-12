@@ -11,9 +11,9 @@
     <!-- Footer -->
     <div class="footer">
         <div class="footer-brand-info">
-            <a href="index.php">
+            <a href="../Homepage/index.php">
                 <div class="footer-logo">
-                    <img src="images/logo.png" alt="rescuers_logo">
+                    <img src="../images/logo.png" alt="rescuers_logo">
                     <h2>RESCUERS</h2>
                 </div>
             </a>
@@ -24,7 +24,7 @@
         <div class="footer-link-box">
             <h4>Quick Links</h4>
             <div class="quick-links">
-                <a href="index.php">HOME</a>
+                <a href="../Homepage/index.php">HOME</a>
                 <a href="">ABOUT</a>
                 <a href="">FEATURES</a>
                 <a href="">CONTACT</a>
@@ -34,12 +34,12 @@
         <div class="footer-link-box">
             <h4>Contact</h4>
             <div class="footer-social-links">
-                <a href=""><img src="icons/social_icons/email.svg" alt=""> dev.pankajkr7@gmail.com</a>
-                <a href=""><img src="icons/social_icons/location.svg" alt=""> Bompass Town, B.Deoghar</a>
+                <a href=""><img src="../icons/social_icons/email.svg" alt=""> dev.pankajkr7@gmail.com</a>
+                <a href=""><img src="../icons/social_icons/location.svg" alt=""> Bompass Town, B.Deoghar</a>
                 <div class="footer-social-icons">
-                    <a href=""><img src="icons/social_icons/linkedin.svg" alt=""></a>
-                    <a href=""><img src="icons/social_icons/instagram.svg" alt=""></a>
-                    <a href=""><img src="icons/social_icons/facebook.svg" alt=""></a>
+                    <a href=""><img src="../icons/social_icons/linkedin.svg" alt=""></a>
+                    <a href=""><img src="../icons/social_icons/instagram.svg" alt=""></a>
+                    <a href=""><img src="../icons/social_icons/facebook.svg" alt=""></a>
                 </div>
             </div>
         </div>

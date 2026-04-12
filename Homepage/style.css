@@ -81,6 +81,58 @@ nav {
     color: #C42026;
 }
 
+/* Account container */
+.account {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Dropdown box */
+.user-icon-opt {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: #fff;
+    border-radius: 6px;
+    width: 140px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 100;
+}
+
+/* Links inside dropdown */
+.user-icon-opt a {
+    padding: 10px 14px;
+    text-decoration: none;
+    color: #121212;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+/* Hover effect */
+.user-icon-opt a:hover {
+    background: #f2f2f2;
+}
+
+/* Show dropdown on hover */
+.account:hover .user-icon-opt {
+    display: flex;
+}
+
+.user-icon-opt {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.2s ease;
+}
+
+.account:hover .user-icon-opt {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Alert Button */
 /* .alert-btn {
     display: block;

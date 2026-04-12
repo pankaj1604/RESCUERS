@@ -2,8 +2,20 @@
 include '../connect.php';
 
 if (!isset($_SESSION['patient_id'])) {
-    header("Location: ../Login/patient_login.html");
+    header("Location: ../Login/patient_login.php");
     exit();
+}
+
+$patient_id = $_SESSION['patient_id'];
+
+// Check if health profile exists
+$sql = "SELECT profile_id FROM health_profile WHERE patient_id='$patient_id'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    $health_link = "../Health_Profile/health_profile.php";
+} else {
+    $health_link = "../Health_Profile/add_health_profile.php";
 }
 ?>
 
@@ -15,7 +27,7 @@ if (!isset($_SESSION['patient_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient Dashboard</title>
     <link rel="stylesheet" href="patient_dashboard.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../Homepage/style.css">
 </head>
 
 <body>
@@ -41,7 +53,7 @@ if (!isset($_SESSION['patient_id'])) {
 
     <!-- Dashboard Feature Section -->
     <div class="d-feature-container">
-        <a href="../Health_Profile/health_profile.html" class="d-feature-box">
+        <a href="<?php echo $health_link; ?>" class="d-feature-box">
             <div class="d-feature-icon health-profile"></div>
             <p>Health Profile</p>
         </a>
@@ -97,49 +109,8 @@ if (!isset($_SESSION['patient_id'])) {
     </div>
 
 
-
-
     <!-- Footer -->
-    <div class="footer">
-        <div class="footer-brand-info">
-            <a href="../index.html">
-                <div class="footer-logo">
-                    <img src="../images/logo.png" alt="rescuers_logo">
-                    <h2>RESCUERS</h2>
-                </div>
-            </a>
-            <p>Rescuers is a health emergency response platform that connects patients with nearby volunteers and
-                NGOs instantly.</p>
-        </div>
-
-        <div class="footer-link-box">
-            <h4>Quick Links</h4>
-            <div class="quick-links">
-                <a href="../index.html">HOME</a>
-                <a href="">ABOUT</a>
-                <a href="">FEATURES</a>
-                <a href="">CONTACT</a>
-            </div>
-        </div>
-
-        <div class="footer-link-box">
-            <h4>Contact</h4>
-            <div class="footer-social-links">
-                <a href=""><img src="../icons/social_icons/email.svg" alt=""> dev.pankajkr7@gmail.com</a>
-                <a href=""><img src="../icons/social_icons/location.svg" alt=""> Bompass Town, B.Deoghar</a>
-                <div class="footer-social-icons">
-                    <a href=""><img src="../icons/social_icons/linkedin.svg" alt=""></a>
-                    <a href=""><img src="../icons/social_icons/instagram.svg" alt=""></a>
-                    <a href=""><img src="../icons/social_icons/facebook.svg" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer Copyright -->
-    <div class="footer-copyright">
-        <p>Developed by <a href="">Pankaj Kumar</a></p>
-    </div>
+    <?php include "../footer.php"; ?>
 </body>
 
 </html>

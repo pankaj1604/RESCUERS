@@ -10,7 +10,7 @@
 
 <body>
 
-    <?php include "navbar.php" ?>
+    <?php include "../navbar.php"; ?>
 
     <!-- Hero Section -->
     <div class="hero-container">
@@ -37,13 +37,13 @@
             </div>
         </div>
 
-        <!-- <a href="#" class="alert-btn"><img src="icons/alert-icon.png" alt=""> ALERT</a> -->
+        <!-- <a href="#" class="alert-btn"><img src="../icons/alert-icon.png" alt=""> ALERT</a> -->
 
 
         <div class="hero-big-circle">
             <div class="hero-small-circle"></div>
         </div>
-        <img src="images/volunteer_red.png" alt="" class="hero-men">
+        <img src="../images/volunteer_red.png" alt="" class="hero-men">
     </div>
 
     <!-- Explore Cards -->
@@ -57,8 +57,8 @@
                 Explore
             </a>
 
-            <img src="images/patient.png" alt="" class="explore-card-img">
-        </div>
+            <img src="../images/patient.png" alt="" class="explore-card-img">
+    </div>
 
         <!-- Volunteer Card -->
         <div class="explore-cards">
@@ -69,7 +69,7 @@
                 Explore
             </a>
 
-            <img src="images/volunteer2.png" alt="" class="explore-card-img">
+            <img src="../images/volunteer2.png" alt="" class="explore-card-img">
         </div>
     </div>
 
@@ -88,7 +88,7 @@
         <h4>“Because help should never be out of reach.”</h4>
         <a href="" class="about-btn">Know More</a>
 
-        <img src="images/emergencyHelping.png" alt="">
+        <img src="../images/emergencyHelping.png" alt="">
     </div>
 
     <!-- Features Section -->
@@ -99,32 +99,32 @@
 
     <div class="feature-card-container">
         <div class="feature-card">
-            <img src="icons/feature_icons/emergency_alert.png" alt="" class="feature-card-icon">
+            <img src="../icons/feature_icons/emergency_alert.png" alt="" class="feature-card-icon">
             <h4 class="feature-card-title">Emergency Alerts</h4>
             <p class="feature-card-desc">Instant alerts to nearby volunteers</p>
         </div>
         <div class="feature-card">
-            <img src="icons/feature_icons/Health_Profile.png" alt="" class="feature-card-icon">
+            <img src="../icons/feature_icons/Health_Profile.png" alt="" class="feature-card-icon">
             <h4 class="feature-card-title">Health Profile</h4>
             <p class="feature-card-desc">Store essential medical information</p>
         </div>
         <div class="feature-card">
-            <img src="icons/feature_icons/report_storage.png" alt="" class="feature-card-icon">
+            <img src="../icons/feature_icons/report_storage.png" alt="" class="feature-card-icon">
             <h4 class="feature-card-title">Report Storage</h4>
             <p class="feature-card-desc">Upload and access medical reports</p>
         </div>
         <div class="feature-card">
-            <img src="icons/feature_icons/volunteer_network.png" alt="" class="feature-card-icon">
+            <img src="../icons/feature_icons/volunteer_network.png" alt="" class="feature-card-icon">
             <h4 class="feature-card-title">Volunteer Network</h4>
             <p class="feature-card-desc">Connect with nearby helpers</p>
         </div>
         <div class="feature-card">
-            <img src="icons/feature_icons/hospital_finder.png" alt="" class="feature-card-icon">
+            <img src="../icons/feature_icons/hospital_finder.png" alt="" class="feature-card-icon">
             <h4 class="feature-card-title">Hospital Finder</h4>
             <p class="feature-card-desc">Locate nearby hospitals quickly</p>
         </div>
         <div class="feature-card">
-            <img src="icons/feature_icons/Ambulance_support.png" alt="" class="feature-card-icon">
+            <img src="../icons/feature_icons/Ambulance_support.png" alt="" class="feature-card-icon">
             <h4 class="feature-card-title">Ambulance Support</h4>
             <p class="feature-card-desc">Quick call for ambulance help</p>
         </div>
@@ -138,18 +138,18 @@
         </div>
         <div class="register-btn-container">
             <div class="register-cta">
-                <img src="images/patient.png" alt="">
-                <a href="SignUp/patient_signup.php">Register as Patient</a>
+                <img src="../images/patient.png" alt="">
+                <a href="../SignUp/patient_signup.php">Register as Patient</a>
             </div>
             <div class="register-cta">
-                <img src="images/volunteer2.png" alt="">
-                <a href="SignUp/volunteer_signup.html">Register as Volunteer</a>
+                <img src="../images/volunteer2.png" alt="">
+                <a href="../SignUp/volunteer_signup.html">Register as Volunteer</a>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-     <?php include "footer.php"; ?>
+     <?php include "../footer.php"; ?>
 
 
     <!-- javascript -->

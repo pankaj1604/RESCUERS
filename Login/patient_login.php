@@ -1,39 +1,57 @@
-<?php
-include '../connect.php';
+<!DOCTYPE html>
+<html lang="en">
 
-// Get form data
-$login_input = $_POST['login_input'];
-$password = $_POST['password'];
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Patient</title>
+    <link rel="stylesheet" href="../SignUp/signup.css">
+    <link rel="stylesheet" href="../Homepage/style.css">
+</head>
 
-// Validation
-if (empty($login_input) || empty($password)) {
-    echo "All fields are required!";
-    exit();
-}
+<body>
 
-// Check user by email OR phone
-$sql = "SELECT * FROM patient 
-        WHERE (email='$login_input' OR phone='$login_input') 
-        AND password='$password'";
+    <?php include "../navbar.php"; ?>
 
-$result = $conn->query($sql);
+    <!-- Login -->
+    <div class="signup-container">
+        <div class="signup-title">
+            <h3>Login</h3>
+            <p>as Patient</p>
+        </div>
+        <form action="p_login.php" method="POST">
+            <label>Email or Phone</label>
+            <input type="text" name="login_input" placeholder="Enter email or phone" required>
 
-if ($result->num_rows === 1) {
+            <label>Password</label>
+            <div style="position: relative;">
+                <input type="password" name="password" id="password" required>
+                <span id="togglePassword">
+                    <img src="../icons/login_signup/eye.svg" alt="">
+                </span>
+            </div>
 
-    $row = $result->fetch_assoc();
+            <input type="submit" value="Login" class="submit-btn">
+        </form>
+        <p class="form-cta">Don't have an account? <a href="../SignUp/patient_signup.php">Sign Up</a></p>
+    </div>
 
-    // Session
-    $_SESSION['patient_id'] = $row['patient_id'];
-    $_SESSION['name'] = $row['name'];
-    $_SESSION['email'] = $row['email'];
 
-    // Redirect
-    header("Location: ../Patient_Dashboard/patient_dashboard.php");
-    exit();
 
-} else {
-    echo "Invalid credentials!";
-}
+    <!-- Footer -->
+     <?php include "../footer.php"; ?>
 
-$conn->close();
-?>
+    <!-- Javascript -->
+
+    <script>
+        const togglePassword = document.getElementById("togglePassword");
+        const password = document.getElementById("password");
+
+        togglePassword.addEventListener("click", function () {
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+        });
+    </script>
+</body>
+
+</html>

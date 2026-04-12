@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Patient</title>
     <link rel="stylesheet" href="signup.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../Homepage/style.css">
 </head>
 
 <body>
@@ -36,7 +36,7 @@
 
             <input type="submit" value="Sign Up" class="submit-btn">
         </form>
-        <p class="form-cta">Already have an account? <a href="../Login/patient_login.html">Login</a></p>
+        <p class="form-cta">Already have an account? <a href="../Login/patient_login.php">Login</a></p>
     </div>
 
 
