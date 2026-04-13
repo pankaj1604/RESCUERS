@@ -57,10 +57,10 @@ if ($result->num_rows > 0) {
             <div class="d-feature-icon health-profile"></div>
             <p>Health Profile</p>
         </a>
-        <div class="d-feature-box">
+        <a href="../Reports/reports.php" class="d-feature-box">
             <div class="d-feature-icon reports"></div>
             <p>Reports</p>
-        </div>
+        </a>
     </div>
 
 

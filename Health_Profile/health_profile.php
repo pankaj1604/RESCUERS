@@ -119,7 +119,9 @@ if ($profile_id) {
             </div>
         </div>
 
-        <a href="" class="edit-health-profile-btn hover-up">Edit Health Profile</a>
+        <a href="edit_health_profile.php" class="edit-health-profile-btn hover-up">
+            Edit Health Profile
+        </a>
     </div>
 
 

@@ -17,13 +17,14 @@
         <h2 class="hero-title">In an <span>Emergency</span>, Every <span>Second Matters.</span></h2>
         <p class="hero-desc">Get instant emergency help, and safely store all your health information.</p>
 
+        <?php if (!isset($_SESSION['patient_id'])): ?>
         <div class="hero-btn-container">
             <div class="hero-btns" id="hero-sign-in-btn">
                 <p>Sign In</p>
 
                 <div class="sign-options" id="sign-in-opt">
-                    <a href="Login/patient_login.html">Patient</a>
-                    <a href="Login/volunteer_login.html">Volunteer</a>
+                    <a href="../Login/patient_login.php">Patient</a>
+                    <a href="../Login/volunteer_login.php">Volunteer</a>
                 </div>
             </div>
 
@@ -31,11 +32,12 @@
                 <p>Sign Up</p>
 
                 <div class="sign-options" id="sign-up-opt">
-                    <a href="SignUp/patient_signup.php">Patient</a>
-                    <a href="SignUp/volunteer_signup.html">Volunteer</a>
+                    <a href="../SignUp/patient_signup.php">Patient</a>
+                    <a href="../SignUp/volunteer_signup.php">Volunteer</a>
                 </div>
             </div>
         </div>
+        <?php endif; ?>
 
         <!-- <a href="#" class="alert-btn"><img src="../icons/alert-icon.png" alt=""> ALERT</a> -->
 
@@ -131,6 +133,7 @@
     </div>
 
     <!-- Register CTA -->
+    <?php if (!isset($_SESSION['patient_id'])): ?>
     <div class="register-cta-container">
         <div class="register-cta-title">
             <h3>BE PREPARED FOR EMERGENCIES</h3>
@@ -147,6 +150,7 @@
             </div>
         </div>
     </div>
+    <?php endif; ?>
 
     <!-- Footer -->
      <?php include "../footer.php"; ?>

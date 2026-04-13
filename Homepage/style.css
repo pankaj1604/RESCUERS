@@ -379,6 +379,7 @@ nav {
 /* Feature Section */
 .feature-card-container {
     margin: 32px 64px;
+    margin-bottom: 64px;
     display: flex;
     align-items: center;
     justify-content: space-between;

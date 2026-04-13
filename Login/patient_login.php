@@ -24,11 +24,8 @@
             <input type="text" name="login_input" placeholder="Enter email or phone" required>
 
             <label>Password</label>
-            <div style="position: relative;">
+            <div>
                 <input type="password" name="password" id="password" required>
-                <span id="togglePassword">
-                    <img src="../icons/login_signup/eye.svg" alt="">
-                </span>
             </div>
 
             <input type="submit" value="Login" class="submit-btn">
