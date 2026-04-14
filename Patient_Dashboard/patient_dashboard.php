@@ -31,6 +31,12 @@ if ($result->num_rows > 0) {
 </head>
 
 <body>
+
+    <!-- Alert Button -->
+    <?php if (isset($_SESSION['patient_id'])): ?>
+        <?php include "../alert_btn.php"; ?>
+    <?php endif; ?>
+
     <!-- Navbar -->
      <?php include "../navbar.php"; ?>
 
@@ -83,34 +89,10 @@ if ($result->num_rows > 0) {
         </div>
     </div>
 
-
-    <!-- Connect with Volunteers -->
-    <div class="add-volunteer-title">
-        <h3>Volunteers</h3>
-        <a href="" class="add-volunteer-btn hover-up">Add +</a>
-    </div>
-    <div class="volunteer-card-container">
-        <div class="volunteer-cards">
-            <div class="volunteer-info">
-                <h3 class="v-name">Arpit Kumar</h3>
-                <p class="v-email">arpit123@gmail.com</p>
-                <p class="v-address">Bompass Town</p>
-            </div>
-
-            <div class="volunteer-contact">
-                <div class="v-contact-btn v-call-btn hover-up">
-                    <img src="../icons/social_icons/phone.svg" alt="">
-                </div>
-                <div class="v-contact-btn v-whatsapp-btn hover-up">
-                    <img src="../icons/social_icons/whatsapp.svg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <!-- Footer -->
     <?php include "../footer.php"; ?>
+
+    <a href="../Patient_Profile/patient_profile.php?id=6">View Profile</a>
 </body>
 
 </html>

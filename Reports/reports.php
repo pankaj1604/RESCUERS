@@ -27,6 +27,12 @@ $result = $conn->query($sql);
 
 <body>
 
+    <!-- Alert Button -->
+    <?php if (isset($_SESSION['patient_id'])): ?>
+        <?php include "../alert_btn.php"; ?>
+    <?php endif; ?>
+
+
     <!-- Navbar -->
     <?php include "../navbar.php" ?>
 

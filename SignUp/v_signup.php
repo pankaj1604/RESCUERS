@@ -17,9 +17,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
-    // Insert into volunteer table
-    $sql = "INSERT INTO volunteer (name, phone, whatsapp_number, address, email, password)
-            VALUES ('$name', '$phone', '$whatsapp', '$address', '$email', '$password')";
+    
+    $lat = $_POST['latitude'];
+    $lng = $_POST['longitude'];
+
+    if (empty($lat) || empty($lng)) {
+        echo "Location is required. Please allow location access.";
+        exit();
+    }
+    
+    $sql = "INSERT INTO volunteer 
+    (name, phone, whatsapp_number, address, email, password, latitude, longitude)
+    VALUES 
+    ('$name', '$phone', '$whatsapp', '$address', '$email', '$password', '$lat', '$lng')";
 
     if ($conn->query($sql)) {
 

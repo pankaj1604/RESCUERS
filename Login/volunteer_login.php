@@ -20,51 +20,36 @@ if (isset($_SESSION['volunteer_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Patient</title>
+    <title>Login - Volunteer</title>
     <link rel="stylesheet" href="../SignUp/signup.css">
     <link rel="stylesheet" href="../Homepage/style.css">
 </head>
 
 <body>
+    <!-- Navbar -->
+    <?php include "../navbar.php" ?>
 
-    <?php include "../navbar.php"; ?>
-
-    <!-- Login -->
+    <!-- Sign Up -->
     <div class="signup-container">
         <div class="signup-title">
             <h3>Login</h3>
-            <p>as Patient</p>
+            <p>as Volunteer</p>
         </div>
-        <form action="p_login.php" method="POST">
+        <form method="POST" action="v_login.php">
             <label>Email or Phone</label>
-            <input type="text" name="login_input" placeholder="Enter email or phone" required>
+            <input type="text" name="login_id" placeholder="Enter email or phone" required>
 
             <label>Password</label>
-            <div>
-                <input type="password" name="password" id="password" required>
-            </div>
+            <input type="password" name="password" required>
 
             <input type="submit" value="Login" class="submit-btn">
         </form>
-        <p class="form-cta">Don't have an account? <a href="../SignUp/patient_signup.php">Sign Up</a></p>
+        <p class="form-cta">Don't have an account? <a href="../SignUp/volunteer_signup.php">Sign Up</a></p>
     </div>
 
 
-
     <!-- Footer -->
-     <?php include "../footer.php"; ?>
-
-    <!-- Javascript -->
-
-    <script>
-        const togglePassword = document.getElementById("togglePassword");
-        const password = document.getElementById("password");
-
-        togglePassword.addEventListener("click", function () {
-            const type = password.getAttribute("type") === "password" ? "text" : "password";
-            password.setAttribute("type", type);
-        });
-    </script>
+    <?php include "../footer.php" ?>
 </body>
 
 </html>

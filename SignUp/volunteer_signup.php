@@ -31,6 +31,9 @@
             <label>Address</label>
             <input type="text" name="address" required>
 
+            <input type="hidden" name="latitude" id="latitude">
+            <input type="hidden" name="longitude" id="longitude">
+
             <label>Email</label>
             <input type="text" name="email" placeholder="demo1234@gmail.com" required>
 
@@ -42,11 +45,36 @@
 
             <input type="submit" value="Sign Up" class="submit-btn">
         </form>
-        <p class="form-cta">Already have an account? <a href="../Login/volunteer_login.html">Login</a></p>
+        <p class="form-cta">Already have an account? <a href="../Login/volunteer_login.php">Login</a></p>
     </div>
 
     <!-- Footer -->
     <?php include "../footer.php" ?>
+
+
+    <!-- Javascript -->
+     <script>
+        window.onload = function () {
+
+            if (navigator.geolocation) {
+
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+
+                        document.getElementById("latitude").value = position.coords.latitude;
+                        document.getElementById("longitude").value = position.coords.longitude;
+
+                    },
+                    function (error) {
+                        alert("Please allow location access to continue.");
+                    }
+                );
+
+            } else {
+                alert("Geolocation is not supported by your browser.");
+            }
+        };
+    </script>
 
 </body>
 

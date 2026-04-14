@@ -29,13 +29,26 @@
             </div>
             <div class="account">
                 <img src="../icons/navbar_icons/account.svg" alt="">
+            
                 <div class="user-icon-opt" id="user-icon-opt">
+            
                     <?php if (isset($_SESSION['patient_id'])): ?>
-                    <a href="../Patient_Dashboard/patient_dashboard.php">Dashboard</a>
-                    <a href="../logout.php">Logout</a>
+                    
+                        <a href="../Patient_Dashboard/patient_dashboard.php">Dashboard</a>
+                        <a href="../logout.php">Logout</a>
+                    
+                    <?php elseif (isset($_SESSION['volunteer_id'])): ?>
+                    
+                        <a href="../Volunteer_Dashboard/volunteer_dashboard.php">Dashboard</a>
+                        <a href="../logout.php">Logout</a>
+                    
                     <?php else: ?>
-                    <a href="../Login/patient_login.php">Login</a>
+                    
+                        <a href="../Login/patient_login.php">Patient Login</a>
+                        <a href="../Login/volunteer_login.php">Volunteer Login</a>
+                    
                     <?php endif; ?>
+                    
                 </div>
             </div>
         </div>

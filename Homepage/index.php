@@ -1,3 +1,5 @@
+<?php include "../connect.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +12,10 @@
 
 <body>
 
+    <?php if (isset($_SESSION['patient_id'])): ?>
+        <?php include "../alert_btn.php"; ?>
+    <?php endif; ?>
+
     <?php include "../navbar.php"; ?>
 
     <!-- Hero Section -->
@@ -17,7 +23,7 @@
         <h2 class="hero-title">In an <span>Emergency</span>, Every <span>Second Matters.</span></h2>
         <p class="hero-desc">Get instant emergency help, and safely store all your health information.</p>
 
-        <?php if (!isset($_SESSION['patient_id'])): ?>
+        <?php if (!isset($_SESSION['patient_id']) && !isset($_SESSION['volunteer_id'])): ?>
         <div class="hero-btn-container">
             <div class="hero-btns" id="hero-sign-in-btn">
                 <p>Sign In</p>
@@ -133,7 +139,7 @@
     </div>
 
     <!-- Register CTA -->
-    <?php if (!isset($_SESSION['patient_id'])): ?>
+    <?php if (!isset($_SESSION['patient_id']) && !isset($_SESSION['volunteer_id'])): ?>
     <div class="register-cta-container">
         <div class="register-cta-title">
             <h3>BE PREPARED FOR EMERGENCIES</h3>
